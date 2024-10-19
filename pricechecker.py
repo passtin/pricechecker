@@ -15,7 +15,6 @@ bot = telegram.Bot(TOKEN)
 
 print("정상적으로 프로그램이 실행됨.")
 
-
 # 비동기적으로 웹 크롤링
 async def web_crawling():
     options = webdriver.ChromeOptions()
