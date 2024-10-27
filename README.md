@@ -5,7 +5,7 @@
 
 # 필요 항목
 * Chrome
-* Python
+* Python 3.13
 * Selenium
 * Schedule
 * Asyncio

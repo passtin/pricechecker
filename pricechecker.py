@@ -48,12 +48,13 @@ async def web_crawling():
 
     # 쿠키 배너 차단
     try:
-        WebDriverWait(driver, 5).until(
+        cookie = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.XPATH, '//*[@id="onetrust-reject-all-handler"]'))
-        ).click()
+        )
+        driver.execute_script("arguments[0].click();", cookie)
     except Exception as e:
         print(f'쿠키 배너를 찾을 수 없음: {e}')
-    sleep(1)
+    sleep(3)
 
     # 코드 단축용 함수
     def change_click():
